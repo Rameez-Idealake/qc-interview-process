@@ -1,5 +1,7 @@
 import Form from 'react-bootstrap/Form'
-import { Button } from 'react-bootstrap'
+import { Button, Upload } from 'antd'
+import "antd/dist/antd.css"
+
 const SubmitTest = () => {
     return (
         <div className='container'>
@@ -18,7 +20,12 @@ const SubmitTest = () => {
 
                 <Form.Group className="mb-3" controlId="EnterEmail">
                     <Form.Label>Upload the defect sheet created <span className='text-danger'>*</span></Form.Label>
-                    <Form.Control type="file" />
+                    <br />
+                    <Upload.Dragger accept='.doc, .docx'>
+                        Please Choose your file &nbsp;
+                        <Button>Upload</Button>
+                    </Upload.Dragger>
+
                 </Form.Group>
 
                 <Button variant="primary" type="submit">
