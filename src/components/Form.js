@@ -16,6 +16,7 @@ function Form({
           <label htmlFor="first-name-input">Enter Name<span>*</span>:</label>
             <input
               type="text"
+              maxLength="50"
               className="form-control"
               id="first-name-input"
               placeholder="Please enter your name"
@@ -32,6 +33,7 @@ function Form({
           <label htmlFor="email">Email address<span>*</span>:</label>
             <input
               type="text"
+              maxLength="100"
               className="form-control"
               id="email"
               placeholder="Enter your email id"
