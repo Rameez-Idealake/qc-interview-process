@@ -14,7 +14,7 @@
   
   form{
       background-color: white;
-      padding: 0px 60px;
+      padding: 0;
       border-radius: 10px;
   }
   
@@ -36,4 +36,48 @@
       cursor: pointer;
       margin-top: 15px;
       margin-bottom: 30px;
+  }
+
+  .mainTab{
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #eee;
+  }
+  .mainTab li{
+    position: relative;
+    width: 50%;
+    
+  }
+  .mainTab li a{
+    padding: 15px 20px;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    text-transform: uppercase;
+    color: #606060;
+    border-bottom: 2px solid #eee;
+    transition: all 0.2s ease;
+  }
+  .mainTab li a.active{
+    color: #663399;
+    border-bottom: 2px solid #663399;
+  }
+
+  .container{
+    padding: 50px 0  20px;
+  }
+
+  .heading3{
+    text-align: center;
+    font-size: 18px;
+    margin-bottom: 30px;
+  }
+  .formWrap{
+    width: 400px;
+    margin: 0 auto;
   }

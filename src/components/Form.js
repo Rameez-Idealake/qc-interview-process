@@ -9,26 +9,27 @@ function Form({
   values
 }) {
   return (
-    <div>
-      <form onSubmit={handleSubmit} autoComplete="off">
+    <div className="container">
+      <h3 className="heading3">Upload Defect Sheet</h3>
+      <form className="formWrap" onSubmit={handleSubmit} autoComplete="off">
         <div className="form-group">
-          <label htmlFor="first-name-input">Username *</label>
+          <label htmlFor="first-name-input">Enter Name<span>*</span>:</label>
             <input
               type="text"
               className="form-control"
               id="first-name-input"
-              placeholder="Enter your username"
+              placeholder="Please enter your name"
               value={values.firstName}
               onChange={handleChange}
+              onKeyDown={handleBlur}
               onBlur={handleBlur}
               name="firstName"
             />
-            <span>{errors.firstName}</span>
+            <span className="errorMsg">{errors.firstName}</span>
         </div>
         
         <div className="form-group">
-          <label htmlFor="email">
-            Email address *</label>
+          <label htmlFor="email">Email address<span>*</span>:</label>
             <input
               type="text"
               className="form-control"
@@ -36,15 +37,16 @@ function Form({
               placeholder="Enter your email id"
               value={values.email}
               onChange={handleChange}
+              onKeyDown={handleBlur}
               onBlur={handleBlur}
               name="email"
             />
-            <span>{errors.email}</span>
+            <span className="errorMsg">{errors.email}</span>
         </div>
 
         <div className="form-group">
           <button type="submit" className="btn btn-primary">
-            Submit
+            Send Now
           </button>
         </div>
 
@@ -85,6 +87,7 @@ function Form({
         </div> */}
 
       </form>
+      <p className="note">Note: Please rename the file with your name, select the file and click on the "Send Now" button</p>
     </div>
   );
 }

@@ -44,11 +44,16 @@ input::placeholder{
 }
 label{
     font-size: 14px;
-    color: gray;
+    color: #323232;
     display: block;
 }
+label span{
 
-span{
+    color: red;
+    font-size: 12px;
+}
+
+.errorMsg{
     font-size: 12px;
     padding: 3px;
     color: red;
@@ -65,4 +70,11 @@ input:invalid[focused="true"]{
 
 input:invalid[focused="true"] ~ span{
     display: block;
+}
+.note{
+    margin-top: 50px;
+    font-size: 13px;
+    font-weight: bold;
+    color: red;
+    text-align: center;
 }
